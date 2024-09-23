@@ -1,0 +1,381 @@
+\documentclass[capitulo]{br-lex}
+
+\usepackage[utf8]{inputenc}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[lmargin=2.5cm, rmargin=2.5cm]{geometry}
+
+\newcommand{\documentTitle}[1]{
+    \begin{center}
+        \MakeUppercase{\textbf{#1}}
+    \end{center}
+}
+
+\newcounter{tit}
+\setcounter{tit}{1}
+
+\newcounter{chap}
+\setcounter{chap}{1}
+
+\newcounter{sec}
+\setcounter{sec}{1}
+
+\newcounter{art}
+\setcounter{art}{1}
+
+\renewcommand{\titulo}[1]{
+    \vspace{20pt}
+    \begin{center}
+        \textbf{\uppercase{Título} \Roman{tit} - \uppercase{#1}}
+    \end{center}
+    \stepcounter{tit}
+    \setcounter{chap}{1}
+}
+
+\newcommand{\capitulo}[1]{
+    \vspace{20pt}
+    \textbf{\uppercase{Capítulo} \Roman{chap}: \uppercase{#1}}
+    \stepcounter{chap}
+    \setcounter{sec}{1}
+}
+
+\newcommand{\secao}[1]{
+    \vspace{20pt}
+    \textbf{Seção \Roman{sec}: #1}
+    \stepcounter{sec}
+}
+
+\renewcommand{\artigo}{
+    \textbf{Art. \arabic{art}:}
+    \stepcounter{art}
+    \setcounter{inciso}{0}
+    \setcounter{paragrafo}{0}
+}
+
+\setlength{\headheight}{2.5cm}
+
+\hyphenation{CAMECC}
+\hyphenation{IMECC}
+
+\begin{document}
+
+\pagestyle{fancy}
+\fancyhead[CO,CE]{\centering\includegraphics[height=0.75cm]{camecc.png}\vspace{10pt}}
+
+\documentTitle{Estatuto do Centro Acadêmico dos Estudantes do IMECC}
+
+\titulo{da organização}
+
+\capitulo{da denominação, sede e fins}
+
+\artigo O centro Acadêmico dos Estudantes do IMECC, neste Estatuto referido como CAMECC, com personalidade jurídica de direito privado, de duração indeterminada, apartidária, obediente ao Novo Código Civil (Lei 10.406, de 10 de janeiro de 2002, artigos 53, 54, 55, 56, 57, 58, 59, 60 e 61) entidade livre e independente, é uma associação sem fins lucrativos, com sede e foro à Rua Claudio Abramo, s/nº, Bairro Cidade Universitária “Zeferino Vaz”, Distrito de Barão Geraldo, Cidade de Campinas, Estado de São Paulo, e compõe a Associação representativa dos estudantes dos Cursos de Graduação do Instituto de Matemática, Estatística e Computação Científica, neste Estatuto referido como IMECC, da Universidade Estadual de Campinas, neste Estatuto referida como UNICAMP.
+
+\paragrafo Toda ação efetuada em nome deste Estatuto e de conformidade com suas cláusulas provém do poder delegado pelos Estudantes dos Cursos de Graduação do IMECC, da UNICAMP
+
+\paragrafo A fim de atender a sua manutenção e finalidade, o CAMECC poderá patrocinar atividades promocionais e receber subvenções, patrocínios e doações.
+
+\artigo São finalidades do CAMECC:
+
+\inciso Defender os interesses e direitos dos estudantes dos cursos de Graduação do IMECC, sem qualquer distinção de raça, cor, nacionalidade, sexo, ou convicção política, religiosa ou social;
+
+\inciso Manifestar-se publicamente, sempre que necessário, em nome dos estudantes representados, se solidarizando com as reivindicações dos estudantes e das entidades estudantis;
+
+\inciso Manter contato e atividades conjuntas com associações congêneres, sempre que necessário e conveniente aos interesses e aspirações dos seus Associados representados;
+
+\inciso Participar e desenvolver atividades socialmente responsáveis.
+
+\capitulo{dos Associados}
+
+\artigo São Associados do CAMECC, os alunos regularmente matriculados nos cursos de Graduação do IMECC, que manifestarem expressamente sua vontade por escrito, a qualquer diretor do CAMECC, em qualquer época do ano.
+
+\paragrafounico Faz-se necessário a solicitação de recadastramento como Associado junto ao CAMECC após um ano a contar da data de associação.
+
+\artigo Perde-se a condição de Associado do CAMECC por:
+
+\inciso Morte;
+
+\inciso Renúncia;
+
+\inciso Conclusão do Curso;
+
+\inciso Trancamento do Curso;
+
+\inciso Abandono do Curso;
+
+\inciso Jubilamento ou punição acadêmica;
+
+\inciso Não Recadastramento;
+
+\artigo São direitos de todos os Associados:
+
+\inciso A participação direta, pela palavra oral ou escrita em qualquer uma de suas Coordenadorias e
+Instâncias deliberativas;
+
+\inciso Votar na Assembleia Geral Ordinária ou Extraordinária do CAMECC;
+
+\inciso Votar ou ser votado para a escolha de cargo de diretoria ou delegado para congressos estudantis,
+como membro representativo da entidade ou para outros níveis de representação;
+
+\inciso Solicitar Assembleia Geral Extraordinária do CAMECC.
+
+\artigo São deveres de todos os Associados:
+
+\inciso Respeitar e cumprir as disposições do presente Estatuto;
+
+\inciso Acatar as decisões tomadas em todas as instâncias deliberativas do CAMECC;
+
+\inciso Indenizar o CAMECC por danos causados ao patrimônio do mesmo.
+
+\artigo Os Associados não responderão subsidiariamente, pelas obrigações sociais da entidade.
+
+\capitulo{da Organização}
+
+\artigo São instâncias deliberativas do CAMECC:
+
+\inciso Assembleia Geral;
+
+\inciso Diretoria;
+
+\inciso Conselho Fiscal.
+
+\secao{Da Assembleia Geral}
+
+\artigo A Assembleia Geral é a instância máxima de deliberação do CAMECC, podendo ser ordinária ou extraordinária.
+
+\artigo O CAMECC realizará duas Assembleias Gerais Ordinárias por ano, sendo uma para aprovar
+a prestação de contas e a outra para eleição da Diretoria e aprovar a prestação de contas;
+
+\artigo O quórum mínimo para a realização da Assembleia Geral, Ordinária ou Extraordinária, será de 2/3 (dois terços) dos Associados. Se à hora marcada para a Assembleia Geral não houver quórum para sua instauração, será dado um prazo de quinze minutos para que seja atingido um quórum mínimo de 1/3 (um terço) dos Associados;
+
+\artigo Em caso de convocação para apreciar destituição de Diretores ou alterações de Estatuto, a Assembleia Geral será dedicada exclusivamente a esses temas, com o quórum mínimo de 2/3 (dois terços) dos Associados. Se à hora marcada para a Assembleia Geral não houver quórum para sua instauração, será dado um prazo de quinze minutos para que seja atingido um quórum mínimo de 1/3 (um terço) dos Associados;
+
+\artigo A Assembleia Geral pode ser convocada por 1/5 (um quinto) dos Diretores eleitos do CAMECC;
+
+\artigo A Assembleia Geral pode ser convocada por 1/5 (um quinto) dos Associados do CAMECC, sendo encaminhado o pedido de convocação da Assembleia Geral a qualquer dos Diretores da entidade, que se encarregará de sua divulgação e publicidade;
+
+\artigo Qualquer membro eleito da Diretoria efetiva poderá presidir os trabalhos de mesa durante a realização da Assembleia.
+
+\artigo Compete à Assembleia Geral:
+
+\inciso Discutir e votar recomendações, teses, moções e propostas apresentadas por qualquer um de seus Associados;
+
+\inciso Denunciar, suspender ou destituir Diretores do CAMECC, garantindo-lhes direito de defesa;
+
+\inciso Tomar decisões a respeito de qualquer assunto de interesse do CAMECC, inclusive modificar regulamentos e regimentos;
+
+\inciso Avaliar ou deliberar sobre contas e relatórios da Diretoria;
+
+\inciso Eleger Diretoria;
+
+\inciso Decidir a extinção do CAMECC, quando o mesmo não mais atingir a sua finalidade ou por Lei;
+
+\inciso Decidir por punição ou exclusão de qualquer um dos Associados da entidade.
+
+\paragrafounico As decisões tomadas na Assembleia Geral devem ser votadas e aprovadas por 50\% (cinquenta por cento) mais 01 (um) dos presentes.
+
+\secao{Da Reunião de Diretoria}
+
+\artigo A reunião de Diretoria ocorrerá de acordo com a deliberação da Diretoria vigente, sendo compulsória uma reunião por mês, durante o calendário letivo da Graduação da UNICAMP.
+
+\inciso O quórum mínimo para a realização da Reunião de Diretoria será de 2/3 (dois terços) dos Diretores. Se à hora marcada para a Reunião de Diretoria não houver quórum para sua instauração, será dado um prazo de quinze minutos para que seja atingido um quórum mínimo de 1/3 (um terço) dos Diretores;
+
+\inciso Em caso de urgência, uma Reunião Geral Extraordinária poderá ser convocada, devendo ser os editais de convocação divulgados publicamente com, pelo menos, 24 (vinte e quatro) horas de antecedência. No que tange ao quórum deverá ser respeitada a disposição do inciso I deste artigo.
+
+\artigo Compete à Diretoria:
+
+\inciso Discutir e votar propostas encaminhadas pelos Diretores, e/ou Associados do CAMECC;
+
+\inciso Discutir prioridades de gasto de acordo com as expectativas de orçamento;
+
+\inciso Informar sobre o expediente burocrático e finanças. Informes diversos sobre atividades sociais, políticas ou culturais afins.
+
+\secao{Da Diretoria}
+
+\artigo A Diretoria é órgão executivo e deliberativo do CAMECC e será eleita conforme o Capítulo IV deste estatuto, com mandato de 01 ano e será composta pelos membros abaixo relacionados:
+
+\inciso Presidente;
+
+\inciso Vice Presidente;
+
+\inciso Tesoureiro;
+
+\inciso Secretário;
+
+\inciso Diretor junto ao Diretório Central dos Estudantes da UNICAMP, neste Estatuto referido como DCE;
+
+\inciso Diretor de Matemática;
+
+\inciso Diretor de Estatística;
+
+\inciso Diretor de Matemática Aplicada;
+
+\inciso Diretor de Licenciatura em Matemática;
+
+\paragrafounico No período de inscrição de chapas para as eleições cada chapa inscrita poderá, caso julgue necessário, inscrever membros adicionais que ocuparão cargos de Diretores Auxiliares a serem decididos em Assembleia Geral.
+
+\artigo A gestão deve ser eleita diretamente, através da formação de chapas, pelos Associados, por sufrágio universal e secreto.
+
+\paragrafo Há possibilidade de reeleição em anos seguintes da Diretoria eleita;
+
+\paragrafo Poderão se candidatar a cargos de representação apenas Associados do CAMECC, conforme previsto no Artigo 3º do presente Estatuto;
+
+\paragrafo A perda de condição de aluno matriculado, em qualquer tempo, implicará a perda do mandato do aluno;
+
+\paragrafo Caberá ao Presidente do CAMECC a função de representar ativa e passiva, judicial e extrajucialmente a Entidade.
+
+\artigo Compete à Diretoria:
+
+\inciso Orientar e coordenar as atividades dos estudantes Associados do CAMECC, de acordo com este Estatuto e com as resoluções emanadas da Assembleia Geral;
+
+\inciso Deliberar em segunda instância acerca de teses, moções, propostas e recomendações;
+
+\inciso Manter constantemente informados os estudantes acerca de suas deliberações e atividades do CAMECC;
+
+\inciso Fazer-se representar nos interesses dos estudantes do IMECC;
+
+\inciso Apresentar semestralmente à Assembleia Geral o seu relatório de prestação de contas;
+
+\inciso Representar o CAMECC junto aos estudantes, autoridades, outras Entidades e à comunidade;
+
+\inciso Comparecer às reuniões ordinárias, que serão marcadas no início do mandato.
+
+\artigo Compete ao Presidente:
+
+\inciso Coordenar as atividades gerais do CAMECC;
+
+\inciso Dirigir as Assembleias gerais;
+
+\inciso Representar o CAMECC em todas as atividades em que este se fizer presente;
+
+\inciso Representar a entidade ativa e passivamente em juízo ou fora dele.
+
+\artigo Compete ao Vice-Presidente:
+
+\inciso Substituir o Presidente na ausência do mesmo.
+
+\artigo Compete ao Tesoureiro:
+
+\inciso Ter sobre o seu controle direto os bens materiais do CAMECC, mantendo um inventário detalhado destes bens;
+
+\inciso Receber, em nome do CAMECC as verbas, doações, contribuições ou legados que porventura sejam destinados ao CAMECC;
+
+\inciso Conservar em depósito o saldo de caixa do CAMECC que só poderá ser movimentado com assinatura do mesmo;
+
+\inciso Ter em guarda os livros contábeis, publicando-se o balancete do movimento da tesouraria no último dia útil de cada mês.
+
+\artigo Compete ao Secretário:
+
+\inciso Secretariar todas as atividades e reuniões promovidas pelo CAMECC;
+
+\inciso Organizar a documentação do CAMECC.
+
+\artigo Compete ao Diretor Junto ao DCE:
+
+\inciso Proporcionar diálogo e integração entre o CAMECC e o DCE;
+
+\inciso Representar o CAMECC no Conselho de Representantes Discentes (CRU);
+
+\artigo Compete aos Diretores da Matemática, Estatística, Matemática Aplicada e Licenciatura em Matemática:
+
+\inciso Realizar intercâmbio com estabelecimentos de pesquisa e tecnologia para a realização de debates e palestras que interessem aos estudantes do IMECC;
+
+\inciso Organizar semanas de estudo de Matemática e Estatística;
+
+\inciso Realizar conjuntamente com o IMECC, ou independente dele, avaliação de professores.
+
+\artigo Compete aos Diretores Auxiliares:
+
+\inciso Auxiliar os outros membros da Diretoria em suas atividades, caso seja necessário.
+
+\artigo Os Diretores não respondem nem mesmo subsidiariamente pelas obrigações sociais do
+CAMECC.
+
+\secao{Do Conselho Fiscal}
+
+\artigo O Conselho Fiscal será composto por, no máximo, 03 (três) Associados que serão eleitos em Assembleia Geral, com período de mandato até o término do mandato da Diretoria vigente.
+
+\artigo Compete ao Conselho Fiscal a análise e a fiscalização da movimentação financeira, fiscal e contábil do CAMECC caso seja solicitado por algum de seus Associados.
+
+\capitulo{da Eleição}
+
+\artigo É responsabilidade dos Diretores a organização das eleições e composição da comissão eleitoral, sendo vetada a participação de componente das chapas inscritas.
+
+\artigo As eleições de chapas para o CAMECC devem obedecer aos seguintes procedimentos:
+
+\inciso Deverão ser realizadas anualmente, em calendário a ser formulado pela Comissão Eleitoral;
+
+\inciso A convocação das eleições será feita em editais, que fixarão prazo de inscrição das chapas interessadas, local de votação, dia e local da realização das eleições;
+
+\inciso Realização da votação em 03 (três) dias, no período diurno e noturno, dentro da UNICAMP, garantindo o sigilo dos votos e a inviolabilidade das urnas;
+
+\inciso Apuração imediata após o término da votação;
+
+\inciso A Comissão Eleitoral deverá ser composta de, no mínimo, 02 (dois) Associados do CAMECC aprovados pela atual gestão desde que nenhum outro Associado do CAMECC manifeste-se contrário.
+
+\artigo Compete à Comissão Eleitoral:
+
+\inciso Acompanhar a eleição;
+
+\inciso Apurar os votos e publicar a ata de eleição;
+
+\inciso Ditar as regras da campanha;
+
+\inciso Votar qualquer nova decisão referente à eleição;
+
+\inciso Receber recurso ou impugnar, caso constate alguma irregularidade;
+
+\inciso Publicar um boletim em que conste o Regimento da eleição;
+
+\inciso Decidir em qual local a urna passará o pernoite.
+
+\artigo As eleições serão anuladas quando:
+
+\inciso O quórum da eleição não atingir o mínimo de 1/6 (um sexto) dos estudantes de Graduação do IMECC;
+
+\inciso O número de votos brancos e nulos for superior a cinquenta por cento do total apurado;
+
+\paragrafounico Em qualquer dos casos mencionados, a anulação será feita pela Comissão Eleitoral, que igualmente se encarregará de convocar novas eleições no prazo máximo de 15 (quinze) dias.
+
+\artigo Não havendo impugnação ou recurso, consideram-se empossados, a partir da apuração dos votos e divulgação dos resultados, os representantes eleitos, ficando determinado que em no máximo 02 (duas) semanas após a apuração deve ser realizada uma reunião entre os membros da chapa eleita e da antiga gestão para troca de informações, bens e documentos referentes ao CAMECC.
+
+\artigo Na ausência de Gestão da Diretoria, 1/10 (um décimo) dos alunos de Graduação do IMECC, por meio de Abaixo-Assinado, e/ou o Representante Discente na Congregação do IMECC poderão convocar Eleições para escolha de nova Diretoria.
+
+\capitulo{da Gestão Patrimonial e Financeira}
+
+\artigo Os recursos financeiros do CAMECC serão provenientes:
+
+\inciso De subvenções ou doações de qualquer natureza;
+
+\inciso De rendas de aplicação de bens ou valores patrimoniais;
+
+\inciso De rendas eventuais;
+
+\inciso De patrocínios.
+
+\artigo Todo o movimento de receita e despesa será lançado em livros apropriados, devidamente comprovado por documentos hábeis.
+
+\artigo Constituem o patrimônio do CAMECC:
+
+\inciso Seus bens móveis e imóveis;
+
+\inciso Os bens e direitos que foram adquiridos, ou lhe foram doados ou legados;
+
+\inciso O saldo de exercício financeiro.
+
+\paragrafounico Somente membros da Diretoria e comissões de apoio terão a posse da chave do CAMECC, mediante a assinatura de um termo de responsabilidade. As chaves deverão ser devolvidas no final do mandato.
+
+\capitulo{Disposições Gerais e Transitórias}
+
+\artigo O presente Estatuto só poderá ser alterado em Assembleia Geral, de acordo com o CAPÍTULO III, Seção I, deste Estatuto.
+
+\artigo O CAMECC somente poderá ser extinto com anuência de 2/3 (dois terços) de seus Associados, presentes na Assembleia convocada especificamente para esta finalidade.
+
+\paragrafounico Em caso de dissolução ou extinção do CAMECC, o patrimônio passará ao Instituto de Matemática, Estatística e Computação Científica – IMECC, da UNICAMP.
+
+\artigo Os casos omissos neste Estatuto serão resolvidos pelos Diretores sendo aprovados por 50\% (cinquenta por cento) mais 01 (um), dos Associados do CAMECC em Assembleia Geral.
+
+\artigo Ficam revogadas todas as disposições em contrário.
+
+\artigo Este Estatuto entra em vigor a partir de sua aprovação em Assembleia.
+
+\end{document}
