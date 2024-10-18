@@ -29,7 +29,6 @@
         \textbf{\uppercase{Título} \Roman{tit} - \uppercase{#1}}
     \end{center}
     \stepcounter{tit}
-    \setcounter{chap}{1}
 }
 
 \newcommand{\capitulo}[1]{
@@ -45,8 +44,14 @@
     \stepcounter{sec}
 }
 
+% Melhorar com: https://linorg.usp.br/CTAN/info/texbytopic/TeXbyTopic.pdf
+
 \renewcommand{\artigo}{
-    \textbf{Art. \arabic{art}:}
+    \ifnum\value{art} < 10
+        \textbf{Art. \arabic{art}º:}
+    \else
+        \textbf{Art. \arabic{art}:}
+    \fi
     \stepcounter{art}
     \setcounter{inciso}{0}
     \setcounter{paragrafo}{0}
