@@ -53,15 +53,16 @@
 \RequirePackage{graphicx}
 \graphicspath{{img/}} % Caminho para as imagens
 
-\RequirePackage{everypage} % Pacote para marcas-d'água
 \RequirePackage{transparent} % Imagens semi-transparentes
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Criação de Variáveis
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\renewcommand{\title}[1]{\renewcommand{\@title}{#1}}
-\renewcommand{\date}[1]{\renewcommand{\@date}{#1}}
+\newcommand{\nomedaentidade}{}
+\newcommand{\adata}{}
+\newcommand{\entidade}[1]{\renewcommand{\nomedaentidade}{#1}}
+\newcommand{\data}[1]{\renewcommand{\adata}{#1}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Alinhamento da página
@@ -69,10 +70,12 @@
 
 \setlength{\oddsidemargin}{-1in} % Remove a margem padrão para páginas ímpares
 \setlength{\evensidemargin}{-1in} % Remove a margem padrão para páginas pares
-\setlength{\topmargin}{0mm} % Margem superior
+\setlength{\topmargin}{\dimexpr 10mm - 1in \relax} % Margem superior
 \setlength{\textwidth}{170mm} % Largura do texto
-\setlength{\textheight}{240mm} % Altura do texto
+\setlength{\textheight}{245mm} % Altura do texto
 \setlength{\hoffset}{20mm} % Margem horizontal
+\setlength{\headsep}{17mm}
+\setlength{\footskip}{15mm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Contadores para os
@@ -104,14 +107,14 @@
 \newcommand{\titulo}[1]{
     \vspace{20pt}
     \begin{center}
-        \textbf{\uppercase{Título} \Roman{tit} - \uppercase{#1}}
+        {\bfseries\uppercase{Título} \Roman{tit} - \uppercase{#1}}
     \end{center}
     \stepcounter{tit}
 }
 
 \newcommand{\capitulo}[1]{
     \vspace{20pt}
-    \noindent\textbf{\uppercase{Capítulo} \Roman{chap}: \uppercase{#1}}
+    \noindent{\bfseries\uppercase{Capítulo} \Roman{chap}: \uppercase{#1}}
     \stepcounter{chap}
     \setcounter{sec}{1}
 }
@@ -159,29 +162,48 @@
 \hyphenation{IMECC}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Cabeçalho e Rodapé
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\thepage}{{\fontfamily{Roboto-TOsF}\selectfont\bfseries\color{vermelho}\arabic{page}}}
+
+\makeatletter
+\def\ps@camecc{
+    \def\@oddfoot{\hfil\thepage\hfil} % Número centralizado no rodapé
+    \def\@evenfoot{\@oddfoot} % Mesmo formato para páginas pares
+    \def\@oddhead{\hfil\includegraphics[height=8mm]{logo-camecc.png}\hfil} % Logo no cabeçalho
+    \def\@evenhead{\@oddhead} % Mesmo formato para páginas pares
+}
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Capa
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \AtBeginDocument{
+    \pagestyle{empty}
     \,
     \vfill\noindent
     \includegraphics[height=1.5cm]{logo-imecc.png}\hspace{0.5cm}
     \includegraphics[height=1.5cm]{logo-unicamp.eps}\vspace{0.75cm}\\
     {\fontfamily{Roboto-TOsF}\selectfont
         {\Large \bfseries \noindent Estatuto do}\vspace{1em}\\
-        \parbox{10cm}{\raggedright \linespread{0.8} \large \@title}\vspace{0.5em}\\
-        {\medium \textit \@date}
+        \parbox{10cm}{\raggedright \large \nomedaentidade}\vspace{0.5em}\\
+        {\medium \textit \adata}
     }
-    \AddThispageHook{
-        \put(-100,-800){{\transparent{0.1} \includegraphics[height=1.2\textheight]{resistencia.png}}}
-        {\transparent{0.05}
-            \put(220,-160){\fontfamily{Roboto-TOsF}\selectfont\bfseries\huge ES}
-            \put(220,-330){\fontfamily{Roboto-TOsF}\selectfont\bfseries\huge TA}
-            \put(220,-500){\fontfamily{Roboto-TOsF}\selectfont\bfseries\huge TU}
-            \put(220,-670){\fontfamily{Roboto-TOsF}\selectfont\bfseries\huge TO}
-        }
+    \newpage
+    \setcounter{page}{1}
+    \pagestyle{camecc}
+}
+
+\AddToHookNext{shipout/foreground}{
+    \put(-20,-850){{\transparent{0.1} \includegraphics[height=1.2\textheight]{resistencia.png}}}
+    {\transparent{0.05}
+        \put(290,-220){\fontfamily{Roboto-TOsF}\selectfont\bfseries\huge ES}
+        \put(290,-390){\fontfamily{Roboto-TOsF}\selectfont\bfseries\huge TA}
+        \put(290,-560){\fontfamily{Roboto-TOsF}\selectfont\bfseries\huge TU}
+        \put(290,-730){\fontfamily{Roboto-TOsF}\selectfont\bfseries\huge TO}
     }
-  \newpage
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
