@@ -20,7 +20,7 @@
 
 \RequirePackage[utf8]{inputenc} % Formatação de acentos
 \RequirePackage[rm,light]{roboto}
-\usepackage[T1]{fontenc}
+\RequirePackage[T1]{fontenc}
 
 % Tamanhos de fonte
 \renewcommand{\normalsize}{\fontsize{12}{14}\selectfont} % Fonte padrão
@@ -43,7 +43,7 @@
 \definecolor{cinza}{RGB}{138, 128, 128}
 \definecolor{cinzaescuro}{RGB}{72, 72, 72}
 
-\pagecolor{base} % Cor base (fundo das páginas)
+%\pagecolor{base} % Cor base (fundo das páginas)
 \color{preto}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -105,6 +105,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\titulo}[1]{
+    \setlength{\leftskip}{0cm}
     \vspace{20pt}
     \begin{center}
         {\bfseries\uppercase{Título} \Roman{tit} - \uppercase{#1}}
@@ -113,6 +114,7 @@
 }
 
 \newcommand{\capitulo}[1]{
+    \setlength{\leftskip}{0cm}
     \vspace{20pt}
     \noindent{\bfseries\uppercase{Capítulo} \Roman{chap}: \uppercase{#1}}
     \stepcounter{chap}
@@ -120,12 +122,14 @@
 }
 
 \newcommand{\secao}[1]{
+    \setlength{\leftskip}{0cm}
     \vspace{20pt}
     \noindent\textbf{Seção \Roman{sec}: #1}
     \stepcounter{sec}
 }
 
 \newcommand{\artigo}{
+    \setlength{\leftskip}{0cm}
     \vspace{1em}\noindent
     \ifnum\value{art} < 10
         \textbf{Art. \arabic{art}º:}
@@ -138,18 +142,21 @@
 }
 
 \newcommand{\paragrafo}{
+    \setlength{\leftskip}{0cm}
     \vspace{0.5em}
     \noindent\textsection\,\arabic{paragrafo}º
     \stepcounter{paragrafo}
 }
 
 \newcommand{\inciso}{
+    \setlength{\leftskip}{0.75cm}
     \vspace{0.5em}
     \noindent\Roman{inciso} \---
     \stepcounter{inciso}
 }
 
 \newcommand{\paragrafounico}{
+    \setlength{\leftskip}{0cm}
     \vspace{0.5em}
     \noindent\textbf{Parágrafo único.} \ignorespaces
 }
@@ -160,6 +167,19 @@
 
 \hyphenation{CAMECC}
 \hyphenation{IMECC}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Campos de Assinatura
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\assinatura}[2]{
+    \vspace{2cm}
+    \begin{center}
+    \rule{5cm}{1pt}\\
+    {\bfseries #1}\\
+    #2
+    \end{center}
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Cabeçalho e Rodapé
